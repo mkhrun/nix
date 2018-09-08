@@ -1,5 +1,6 @@
 package nix.exercise.two.domain.dto;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import lombok.Data;
@@ -9,5 +10,6 @@ public class OrderDto {
     private String customerName;
     private String customerSurname;
     private String customerEmail;
-    private List<String> phoneArticles;
+    private List<OrderedPhone> phones;
+    private BigDecimal totalPrice;
 }

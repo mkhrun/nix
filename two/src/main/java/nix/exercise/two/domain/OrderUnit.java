@@ -1,5 +1,6 @@
 package nix.exercise.two.domain;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.Entity;
@@ -33,4 +34,6 @@ public class OrderUnit {
 
     @OneToMany(mappedBy = "orderUnit", cascade = REMOVE)
     private List<OrderDetail> orderDetails;
+
+    private BigDecimal totalPrice;
 }
