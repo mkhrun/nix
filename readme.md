@@ -15,7 +15,7 @@ docker pull mkhrun/nix:phone-ordering
 
 Run pushed docker image
 ```
-docker run -p <your port>: 8080 -p <your port>: 8081 -p <your port>: 9091 mkhrun/nix:phone-ordering
+docker run -p <your port>:8080 -p <your port>:8081 -p <your port>:9091 mkhrun/nix:phone-ordering
 ```
 
 ### Port mapping
