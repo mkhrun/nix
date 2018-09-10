@@ -1,6 +1,6 @@
 # Project Title
 
-N-IX's interview exercise
+N-iX's interview exercise
 
 ### Prerequisites
 
