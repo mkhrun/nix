@@ -1,11 +1,5 @@
-.idea/
-eurekaserver/.idea/
-eurekaserver/target/
-one/.idea/
-one/target/
-two/.idea/
-two/target/
+.idea
+target
 *.iml
 *.mv.db
 *.trace.db
-*.jar

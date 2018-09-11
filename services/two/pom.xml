@@ -3,27 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eurekaserver</artifactId>
+    <artifactId>two</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>eurekaserver</name>
-    <description>Eureka registry server</description>
+    <name>two</name>
+    <description>Order microservice</description>
 
     <parent>
         <groupId>nix</groupId>
-        <artifactId>exercise</artifactId>
+        <artifactId>services</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-    </dependencies>
-
     <build>
-        <finalName>eurekaserver</finalName>
+        <finalName>two</finalName>
     </build>
 </project>
