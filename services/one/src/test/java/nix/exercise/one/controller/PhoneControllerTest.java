@@ -1,6 +1,6 @@
 package nix.exercise.one.controller;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +10,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import nix.exercise.one.domain.Phone;
 import nix.exercise.one.repository.PhoneRepository;
 
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -30,11 +32,15 @@ public class PhoneControllerTest {
 
     @Test
     public void getAllPhones() throws Exception {
-        when(phoneRepository.findAll()).thenReturn(new ArrayList<>());
+        var phone = new Phone();
+        phone.setArticle("aaa");
+
+        when(phoneRepository.findAll()).thenReturn(Arrays.asList(phone));
 
         mockMvc.perform(get("/phones/all"))
                .andExpect(status().isOk())
-               .andExpect(jsonPath("$", hasSize(0)));
+               .andExpect(jsonPath("$", hasSize(1)))
+               .andExpect(jsonPath("$[0].article", equalTo("aaa")));
 
         verify(phoneRepository).findAll();
     }
